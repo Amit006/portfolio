@@ -1,0 +1,374 @@
+
+/* animation defination */
+.animation{
+  animation-duration: 2s;
+  -webkit-animation-duration: 2s;
+  -moz-animation-duration: 2s;
+  -
+}
+
+.animation.infinite{
+  animation-iteration-count: infinite;
+}
+
+@keyframes  SlideInLeft{
+	from{
+		transform: translate3d(-100%,0,0);
+		visibility: visible;
+	}
+	to{
+		transform: translate3d(0, 0, 0);
+	}
+}
+
+.slideinleft{
+  animation-name: SlideInLeft;
+  animation-duration: 3s;
+  animation-delay: 1s;
+}
+@keyframes SlideInLefthalf{
+	from{
+		transform: translate3d(-50%, 0, 0);
+		visibility: visible;
+	}
+	to{
+		transform: translate3d(0,0,0);
+	}
+}
+.slideinlefthalf{
+animation-name: SlideInLefthalf;
+  animation-duration: 2s;
+  animation-delay: 1s;
+}
+@keyframes SlideInRight{
+  from{
+    transform: translate3d(100%, 0, 0);
+    visibility: visible;
+  }
+  to{
+    transform: translate3d(0,0,0);
+  }
+}
+.slideinright{
+  animation-name: SlideInRight;
+  animation-duration: 3s;
+  animation-delay: 1s;
+}
+
+  @keyframes SlideInRightHalf{
+    from{
+    transform: translate3d(50%,0,0);
+    visibility: visible;
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.slideininrighthalf{
+  animation-name: SlideInRightHalf;
+  animation-duration: 2s;
+  animation-delay: 1s;
+} 
+
+@keyframes bounce {
+  from, 20%, 53%, 80%, to {
+    animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+    transform: translate3d(0,0,0);
+  }
+
+  40%, 43% {
+    animation-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
+    transform: translate3d(0, -30px, 0);
+  }
+
+  70% {
+    animation-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
+    transform: translate3d(0, -15px, 0);
+  }
+
+  90% {
+    transform: translate3d(0,-4px,0);
+  }
+}
+@keyframes rubberBand {
+  from {
+    transform: scale3d(1, 1, 1);
+  }
+
+  30% {
+    transform: scale3d(1.25, 0.75, 1);
+  }
+
+  40% {
+    transform: scale3d(0.75, 1.25, 1);
+  }
+
+  50% {
+    transform: scale3d(1.15, 0.85, 1);
+  }
+
+  65% {
+    transform: scale3d(.95, 1.05, 1);
+  }
+
+  75% {
+    transform: scale3d(1.05, .95, 1);
+  }
+
+  to {
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+.rubberBand {
+  animation-name: rubberBand;
+  animation-duration: 2s; 
+}
+
+@keyframes bounceInLeft {
+  from, 60%, 75%, 90%, to {
+    animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+  }
+
+  0% {
+    opacity: 0;
+    transform: translate3d(-3000px, 0, 0);
+  }
+
+  60% {
+    opacity: 1;
+    transform: translate3d(25px, 0, 0);
+  }
+
+  75% {
+    transform: translate3d(-10px, 0, 0);
+  }
+
+  90% {
+    transform: translate3d(5px, 0, 0);
+  }
+
+  to {
+    transform: none;
+  }
+}
+
+.bounceInLeft {
+  animation-name: bounceInLeft;
+  animation-duration: 2.5s; 
+}
+@keyframes pulse {
+  from {
+    transform: scale3d(1, 1, 1);
+  }
+
+  50% {
+    transform: scale3d(1.05, 1.05, 1.05);
+  }
+
+  to {
+    transform: scale3d(1.6,1.5, 2);
+  }
+}
+
+.pulse {
+  animation-delay: 1s;
+  animation-name: pulse;
+  animation-duration: 2s;
+  animation-direction: reverse; 
+}
+@keyframes flip {
+  from {
+    transform: perspective(400px) rotate3d(0, 1, 0, -360deg);
+    animation-timing-function: ease-out;
+  }
+
+  40% {
+    transform: perspective(400px) translate3d(0, 0, 150px) rotate3d(0, 1, 0, -190deg);
+    animation-timing-function: ease-out;
+  }
+
+  50% {
+    transform: perspective(400px) translate3d(0, 0, 150px) rotate3d(0, 1, 0, -170deg);
+    animation-timing-function: ease-in;
+  }
+
+  80% {
+    transform: perspective(400px) scale3d(.95, .95, .95);
+    animation-timing-function: ease-in;
+  }
+
+  to {
+    transform: perspective(400px);
+    animation-timing-function: ease-in;
+  }
+}
+
+.animated.flip {
+  -webkit-backface-visibility: visible;
+  backface-visibility: visible;
+  animation-name: flip;
+  animation-delay: 1s;
+  animation-duration: 1.5s;
+
+}
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.fadeinDown {
+  animation-name: fadeInDown;
+  animation-delay: 1.7s;
+  visibility: visible;
+  animation-duration: 1.2s;
+}
+.fadeinDown1{
+  animation-name: fadeInDown;
+  animation-delay: 1.7s;
+  animation-duration: 1.5s;
+  visibility: visible;
+}
+.fadeinDown2{
+  animation-name: fadeInDown;
+  animation-delay: 1.7s;
+  animation-duration: 1.5s;
+}
+.fadeinDown3{
+  animation-name: fadeInDown;
+  animation-delay: 1.7s;
+  animation-duration: 1.5s;
+}
+
+
+@keyframes bounceInUp {
+  from, 60%, 75%, 90%, to {
+    animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+  }
+
+  from {
+    opacity: 0;
+    transform: translate3d(0, 3000px, 0);
+  }
+
+  60% {
+    opacity: 1;
+    transform: translate3d(0, -20px, 0);
+  }
+
+  75% {
+    transform: translate3d(0, 10px, 0);
+  }
+
+  90% {
+    transform: translate3d(0, -5px, 0);
+  }
+
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.bounceInUp {
+  animation-name: bounceInUp;
+  animation-delay: 1.8s;
+  animation-duration: 1s;
+}
+
+@keyframes fadeOutDown {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+    transform: translate3d(0, 100%, 0);
+  }
+}
+
+.fadeOutDown {
+  animation-name: fadeOutDown;
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translate3d(100%, 0, 0);
+    visibility: visible;
+  }
+
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.slideinRight {
+  animation-name: slideInRight;
+  animation-duration: 2s;
+  animation-delay: 1.5s;
+}
+
+@keyframes rotateInDownLeft {
+  from {
+    transform-origin: left bottom;
+    transform: rotate3d(0, 0, 1, -45deg);
+    opacity: 0;
+  }
+
+  to {
+    transform-origin: left bottom;
+    transform: none;
+    opacity: 1;
+  }
+}
+
+.rotateInDownLeft {
+  animation-name: rotateInDownLeft;
+  animation-delay: 1.5s;
+  animation-duration: 1s;
+}
+@keyframes slideOutLeft {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+
+  to {
+    visibility: hidden;
+    transform: translate3d(-100%, 0, 0);
+  }
+}
+
+.slideOutLeft {
+  animation-name: slideOutLeft;
+  animation-duration: 2s;
+  animation-delay: 1s;
+  animation-direction: alternate-reverse;
+  animation-iteration-count: 2;
+  animation-play-state: running;
+}
+@keyframes slideOutRight {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+
+  to {
+    visibility: hidden;
+    transform: translate3d(100%, 0, 0);
+  }
+}
+
+.slideOutRight {
+  animation-name: slideOutRight;
+    animation-duration: 2s;
+  animation-delay: 1s;
+  animation-direction: alternate-reverse;
+  animation-iteration-count: 2;
+  animation-play-state: running;
+}
